@@ -58,7 +58,10 @@ $(".hour").each(function (index, element) {
 // Save button handler
 $(".saveDesc").on("click", function(event){
   event.preventDefault();
-  console.log((event.target.id-9))
+  var hourNum = event.target.id;
+  console.log((hourNum-9));
+  plans[hourNum] = $("textarea#" + hourNum);
+
 })
 
 
