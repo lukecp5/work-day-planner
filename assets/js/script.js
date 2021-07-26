@@ -62,6 +62,7 @@ $(".saveDesc").on("click", function(event){
   console.log((event.target.id-9));
   plans[hourNum] = $("textarea#" + hourNum).val();
 
+  storeDesc();
 })
 
 function init(){
