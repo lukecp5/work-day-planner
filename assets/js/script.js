@@ -32,13 +32,6 @@ function displayDesc() {
   }
 }
 
-function readDesc(){
-  var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
-  if(storedPlans){
-    plans = storedPlans;
-  }
-}
-
 function storeDesc(){
     // Create local storage 
     localStorage.setItem("storedPlans", JSON.stringify(plans));
@@ -66,5 +59,8 @@ $(".hour").each(function (index, element) {
 
 
 function init(){
-  
+  var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
+  if(storedPlans){
+    plans = storedPlans;
+  }
 }
