@@ -64,7 +64,7 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-  display: block;
+  display: block !important;
   margin: 0 auto;
 }
 
