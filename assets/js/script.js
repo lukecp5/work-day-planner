@@ -57,11 +57,10 @@ $(".hour").each(function (index, element) {
   }
 });
 
-$(".saveDesc").on("click", handleSave(e))
+$(".saveDesc").on("click", function(event){
+  
+})
 
-function handleSave(e){
-  console.log(e.target)
-}
 
 function init(){
   var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
