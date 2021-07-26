@@ -14,12 +14,12 @@ var times = {
 
 // Placeholder variable for local storage events
 var plans = {
-  0: "Test",
-  1: "Test",
-  2: "1",
+  0: "",
+  1: "",
+  2: "",
   3: "",
-  4: "2",
-  5: "3",
+  4: "",
+  5: "",
   6: "",
   7: "",
   8: "",
@@ -32,12 +32,11 @@ function displayDesc() {
   }
 }
 
-function storeDesc(){
-    // Create local storage 
-    localStorage.setItem("storedPlans", JSON.stringify(plans));
+function storeDesc() {
+  // Create local storage
+  localStorage.setItem("storedPlans", JSON.stringify(plans));
 }
 
-displayDesc();
 $(".hour").each(function (index, element) {
   console.log(index);
   // Get current time from moment
@@ -56,18 +55,22 @@ $(".hour").each(function (index, element) {
 });
 
 // Save button handler
-$(".saveDesc").on("click", function(event){
+$(".saveDesc").on("click", function (event) {
   event.preventDefault();
-  var hourNum = (event.target.id - 9);
-  console.log((event.target.id-9));
+  var hourNum = event.target.id - 9;
+  console.log(event.target.id - 9);
   plans[hourNum] = $("textarea#" + hourNum).val();
 
   storeDesc();
-})
+});
 
-function init(){
+// Fn() to run on document load. Reads local storage data, and sets the plans object equal to the saved plans in local storage
+function init() {
   var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
-  if(storedPlans){
+  if (storedPlans) {
     plans = storedPlans;
   }
+  displayDesc();
 }
+
+init();
