@@ -58,7 +58,8 @@ $(".hour").each(function (index, element) {
 });
 
 $(".saveDesc").on("click", function(event){
-  
+  event.preventDefault();
+  console.log(event.target)
 })
 
 
