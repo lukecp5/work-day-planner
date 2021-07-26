@@ -45,8 +45,6 @@ $(".hour").each(function (index, element) {
   var momentHour = "11";
   // Get ID of each hour rows textboxes
   var rowHour = $(this).siblings(".description").children().attr("id");
-  console.log(times[rowHour]);
-  console.log(rowHour);
   // If row hour < momentHour - past. If row hour === moment() - present. If hour row > moment() - future
   if (times[rowHour] < momentHour) {
     $(this).siblings(".description").addClass("past");
@@ -57,9 +55,10 @@ $(".hour").each(function (index, element) {
   }
 });
 
+// Save button handler
 $(".saveDesc").on("click", function(event){
   event.preventDefault();
-  console.log(event.target)
+  console.log((event.target.id-9))
 })
 
 
