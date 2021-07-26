@@ -58,12 +58,11 @@ $(".hour").each(function (index, element) {
 // Save button handler
 $(".saveDesc").on("click", function(event){
   event.preventDefault();
-  var hourNum = event.target.id;
-  console.log((hourNum-9));
-  plans[hourNum] = $("textarea#" + hourNum);
+  var hourNum = (event.target.id - 9);
+  console.log((event.target.id-9));
+  plans[hourNum] = $("textarea#" + hourNum).val();
 
 })
-
 
 function init(){
   var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
