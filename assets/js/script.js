@@ -40,7 +40,8 @@ function readDesc(){
 }
 
 function storeDesc(){
-
+    // Create local storage 
+    localStorage.setItem("storedPlans", JSON.stringify(plans));
 }
 
 displayDesc();
@@ -62,6 +63,7 @@ $(".hour").each(function (index, element) {
     $(this).siblings(".description").addClass("future");
   }
 });
+
 
 function init(){
   
