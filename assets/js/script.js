@@ -1,4 +1,3 @@
-var hours = $(".hour");
 // The time of day in 24H time for each row
 var times = {
   0: 9,
@@ -46,11 +45,12 @@ function getDate() {
 // Display descriptions stored in the plans object
 function displayDesc() {
   for (i = 0; i < 9; i++) {
+    // Use the JQuery selector plus a for loop to update the value of all of the textareas
     $("#" + i).val(plans[i]);
   }
 }
 function storeDesc() {
-  // Create local storage
+  // Create local storage and store the plans object in it
   localStorage.setItem("storedPlans", JSON.stringify(plans));
 }
 
@@ -58,7 +58,6 @@ $(".hour").each(function (index, element) {
   console.log(index);
   // Get current time from moment
   var momentHour = moment().format("HH");
-  // var momentHour = "11";
   // Get ID of each hour rows textboxes
   var rowHour = $(this).siblings(".description").children().attr("id");
   // If row hour < momentHour - past. If row hour === moment() - present. If hour row > moment() - future
