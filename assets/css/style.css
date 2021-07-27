@@ -83,6 +83,10 @@ i.fa-2x{
     text-transform:uppercase;
     font-size: 1.5em;
     font-weight: 100;
+    /* border-top: 4px solid transparent; */
+  }
+  .row{
+    border-top: 4px solid transparent;
   }
 }
 @media screen and (min-width: 768px) {
