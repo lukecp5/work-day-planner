@@ -41,6 +41,8 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 .past {
@@ -70,10 +72,7 @@ i.fa-2x{
   margin: 0 auto;
 }
 
-.saveBtn i:hover {
-  font-size: 2.1rem;
-  transition: all 0.3s ease-in-out;
-}
+
 @media screen and (max-width: 576px) {
   html{
     font-size: 12px;
@@ -81,6 +80,13 @@ i.fa-2x{
   .hour{
     padding-bottom: .2rem;
     /* font-weight: bold; */
-    font-size: 4vw;
+    text-transform:uppercase;
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hour{
+    border-left: 1px dashed #000000;
   }
 }
