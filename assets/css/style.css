@@ -32,7 +32,7 @@ textarea {
 
 .row {
   white-space: pre-wrap;
-  height: auto;
+  min-height: 84px;
   border-top: 1px solid white;
   justify-content: center;
 }
@@ -71,11 +71,16 @@ i.fa-2x{
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 2.1rem;
   transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 576px) {
   html{
     font-size: 12px;
+  }
+  .hour{
+    padding-bottom: .2rem;
+    /* font-weight: bold; */
+    font-size: 4vw;
   }
 }
