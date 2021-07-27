@@ -28,6 +28,7 @@ init();
 
 // Fn() to run on document load. Reads local storage data, and sets the plans object equal to the saved plans in local storage
 function init() {
+  getDate();
   var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
   if (storedPlans) {
     plans = storedPlans;
