@@ -59,6 +59,7 @@ $(".hour").each(function (index, element) {
   console.log(index);
   // Get current time from moment
   var momentHour = moment().format("HH");
+  // var momentHour = 11;
   // Get ID of each hour rows textboxes
   var rowHour = $(this).siblings(".description").children().attr("id");
   // If row hour < momentHour - past. If row hour === moment() - present. If hour row > moment() - future
