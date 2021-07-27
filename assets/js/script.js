@@ -25,13 +25,30 @@ var plans = {
   8: "",
 };
 
+init();
+
+// Fn() to run on document load. Reads local storage data, and sets the plans object equal to the saved plans in local storage
+function init() {
+  var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
+  if (storedPlans) {
+    plans = storedPlans;
+  }
+  displayDesc();
+}
+
+//  Get date from moment, set date in header to current date
+function getDate() {
+  var currentDate = moment().format("dddd, MMMM Do");
+  $("#currentDay").text(currentDate);
+  // return currentDate;
+}
+
 // Display descriptions stored in the plans object
 function displayDesc() {
   for (i = 0; i < 9; i++) {
     $("#" + i).val(plans[i]);
   }
 }
-
 function storeDesc() {
   // Create local storage
   localStorage.setItem("storedPlans", JSON.stringify(plans));
@@ -40,8 +57,8 @@ function storeDesc() {
 $(".hour").each(function (index, element) {
   console.log(index);
   // Get current time from moment
-  // var momentHour = moment().format("HH");
-  var momentHour = "11";
+  var momentHour = moment().format("HH");
+  // var momentHour = "11";
   // Get ID of each hour rows textboxes
   var rowHour = $(this).siblings(".description").children().attr("id");
   // If row hour < momentHour - past. If row hour === moment() - present. If hour row > moment() - future
@@ -64,13 +81,3 @@ $(".saveDesc").on("click", function (event) {
   storeDesc();
 });
 
-// Fn() to run on document load. Reads local storage data, and sets the plans object equal to the saved plans in local storage
-function init() {
-  var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
-  if (storedPlans) {
-    plans = storedPlans;
-  }
-  displayDesc();
-}
-
-init();
