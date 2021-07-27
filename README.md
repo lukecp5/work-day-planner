@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# Work-Day-Planner
 
-You can use the [editor on GitHub](https://github.com/lukecp5/work-day-planner/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Introduction
 
-### Markdown
+This app is designed to be a way for busy people to plan out their day. It features the current date at the top of the page, and a timeblock for each hour of a normal business day. By clicking a timeblock, you can enter your event/task for that time of day. By clicking the save button next to the respective timeblock, you can save your entry to your local storage for later use. It will be available to you when you return to the page - even after navigating away from the application.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Technologies
+- HTML
+- CSS
+- Responsive Design
+- Javascript
+- JQuery
+- Moment.js
 
-```markdown
-Syntax highlighted code block
+### Screenshot
+![Screenshot of application](assets/images/screenshot.png)
 
-# Header 1
-## Header 2
-### Header 3
+### Features
+- Dynamically generated timeblock data
+- Saving events to Local Storage for persistence
+- Color coded timeblocks to let you know where you're at with your day
+- The ability to visit the planner on any device and get an enjoyable experience
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lukecp5/work-day-planner/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Launch
+Check out the daily planner in action: [Live Application Link](https://github.io/lukecp5/work-day-planner/)
