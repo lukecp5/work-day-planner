@@ -24,6 +24,11 @@ This app is designed to be a way for busy people to plan out their day. It featu
 ## Launch
 Check out the daily planner in action: [Live Application Link](https://github.io/lukecp5/work-day-planner/)
 
+## Contact Me
+LinkedIn: [@luke-poirrier](https://www.linkedin.com/in/luke-poirrier)  
+Email: [Luke@LukePoirrier.com](mailto:Luke@LukePoirrier.com)  
+Portfolio: [LukePoirrier.com](http://lukepoirrier.com)  
+
 ### License
 This application is licensed under the MIT License, you can find the full license information [here](https://github.com/lukecp5/work-day-planner/blob/main/LICENSE.txt)
 
